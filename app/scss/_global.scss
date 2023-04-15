@@ -1,3 +1,28 @@
 body {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+}
+
+.main {
+   flex-grow: 1;
+}
+
+.container {
+   max-width: 1200px;
+   padding: 0 15px;
+}
+
+@mixin adaptive-value($property, $startSize, $ultimSize, $breakpoint, $container: 1200, $type: "shrink") {
+   $changeSize: abs($startSize - $ultimSize);
+   @if $type == "shrink" {
+      #{$property}: calc(#{$ultimSize}px + #{$changeSize} * ((100vw - #{$breakpoint}px) / (#{$container} - #{$breakpoint})));
+   }
+   @else if $type == "rise" {
+     #{$property}: calc(#{$startSize}px - #{$changeSize} * ((100vw - #{$breakpoint}px) / (#{$container} - #{$breakpoint})));
+   }
+}
+
+%button-transparent {
    
 }
