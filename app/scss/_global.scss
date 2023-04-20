@@ -1,28 +1,136 @@
 body {
-   min-height: 100vh;
-   display: flex;
-   flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: $default;
+  font-size: 14px;
+}
+
+body * {
+  cursor: url("../images/icons/cursor.svg"), auto;
 }
 
 .main {
-   flex-grow: 1;
+  flex-grow: 1;
 }
 
 .container {
-   max-width: 1200px;
-   padding: 0 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-@mixin adaptive-value($property, $startSize, $ultimSize, $breakpoint, $container: 1200, $type: "shrink") {
-   $changeSize: abs($startSize - $ultimSize);
-   @if $type == "shrink" {
-      #{$property}: calc(#{$ultimSize}px + #{$changeSize} * ((100vw - #{$breakpoint}px) / (#{$container} - #{$breakpoint})));
-   }
-   @else if $type == "rise" {
-     #{$property}: calc(#{$startSize}px - #{$changeSize} * ((100vw - #{$breakpoint}px) / (#{$container} - #{$breakpoint})));
-   }
+@mixin adaptive-value(
+  $property,
+  $startSize,
+  $ultimSize,
+  $breakpoint,
+  $container: 1200,
+  $type: "shrink"
+) {
+  $changeSize: abs($startSize - $ultimSize);
+  @if $type == "shrink" {
+    #{$property}: calc(
+      #{$ultimSize}px +
+        #{$changeSize} *
+        ((100vw - #{$breakpoint}px) / (#{$container} - #{$breakpoint}))
+    );
+  } @else if $type == "rise" {
+    #{$property}: calc(
+      #{$startSize}px -
+        #{$changeSize} *
+        ((100vw - #{$breakpoint}px) / (#{$container} - #{$breakpoint}))
+    );
+  }
 }
 
 %button-transparent {
-   
+  border: 2px solid #f8d24e;
+  border-radius: 10px;
+  padding: 12px 34px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: $title;
+  transition: all 0.3s;
+  &:hover {
+    border-color: #0a8817;
+  }
+  &:focus {
+    border-color: #0a8817;
+    color: $default;
+  }
+  &.disabled {
+    background-color: #ababab;
+  }
+}
+
+%button {
+  background: #f8d24e;
+  border-radius: 10px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  line-height: 17px;
+  padding: 12px 34px;
+  border: none;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  svg {
+    stroke: $title;
+  }
+  &:hover {
+    background-color: #0a8817;
+  }
+  &:focus {
+    background-color: #0a8817;
+    color: $default;
+    svg {
+      transition: all 0.3s;
+      stroke: $default;
+    }
+  }
+  &.disabled {
+    background-color: #ababab;
+  }
+}
+
+%link {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration-line: underline;
+  color: $accent;
+  padding: 12px 21px;
+  transition: all .3s;
+  &:hover {
+    color: #0a8817;
+  }
+  &:focus {
+    color: $default;
+  }
+  &.disabled {
+    color: #ababab;
+  }
+}
+
+%arrow {
+   svg {
+      transition: all .3s;
+    }
+    &:hover {
+      svg {
+         transition: all .3s;
+         transform: translateX(5px) scaleX(1.2);
+      }
+    }
+    &:focus {
+      svg {
+         transition: all .3s;
+         transform: translateX(5px) scale(1.2);
+      }
+    }
 }

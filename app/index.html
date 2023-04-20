@@ -2,94 +2,110 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>ICE CREAM</title>
-   <link rel="stylesheet" href="css/style.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICE CREAM</title>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-   <header class="header">
-      <div class="container">
-         <div class="header-top">
-            <a class="header-top__logo-link" href="#">
-               <svg class="header-top__logo-img" width="60px" height="65px">
-                  <use xlink:href="images/sprite.svg#logo"></use>
-               </svg>
-            </a>
-            <nav class="menu">
-               <ul class="menu__list">
-                  <li class="menu__item">
-                     <a class="menu__link" href="#">Home</a>
-                  </li>
-                  <li class="menu__item">
-                     <a class="menu__link" href="#how">How it's made?</a>
-                  </li>
-                  <li class="menu__item">
-                     <a class="menu__link" href="">Our products</a>
-                  </li>
-                  <li class="menu__item">
-                     <a class="menu__link" href="">Contact</a>
-                  </li>
-               </ul>
-            </nav>
-            <button class="buy-btn">
-               Buy now
-               <svg width="12px" height="12px">
-                  <use xlink:href="images/sprite.svg#angle-right"></use>
-               </svg>
+  <header class="header">
+    <div class="container">
+      <div class="header-top">
+        <a class="header-top__logo-link" href="#">
+          <svg class="header-top__logo-img" width="60px" height="65px">
+            <use xlink:href="images/sprite.svg#logo"></use>
+          </svg>
+        </a>
+        <nav class="menu">
+          <button class="menu__btn" id="menu__btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="menu__list" id="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Home</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#how">How it's made?</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="">Our products</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="">Contact</a>
+            </li>
+            <button class="header-top__buy-btn" id="buy-btn__menu">
+              Buy now
+              <svg width="7px" height="10px">
+                <use xlink:href="images/sprite.svg#angle-right"></use>
+              </svg>
             </button>
-         </div>
-         <div class="header-content">
-            <div class="header-content__inner">
-               <h1 class="header-content__title">
-                  ice cream
-                  made with
-                  passion
-               </h1>
-               <div class="header-content__links">
-                  <a class="header-content__links-item header-content__links-products" href="#products">Products</a>
-                  <a class="header-content__links-item header-content__links-how" href="#how">How it's made?</a>
-               </div>
-               <div class="header-content__info" href="#">
-                  <img class="header-content__info-img" src="images/dish.png" alt="ice cream">
-                  <a class="header-content__info-link" href="#">
-                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                     <svg width="40px" height="15px">
-                        <use xlink:href="images/sprite.svg#default-arrow"></use>
-                     </svg>
-                  </a>
-               </div>
-            </div>
-            <picture class="header-content__img">
-               <source srcset="images/header-imgs/1200.png">
-               <source srcset="images/header-imgs/768.png" media="max-width: 768px">
-               <source srcset="images/header-imgs/320.png" media="max-width: 320px">
-               <img src="images/header-imgs/1200.png" alt="header-img">
-            </picture>
-            <div class="header-content__numbers">
-               <div class="header-content__numbers-item">
-                  16
-                  <p>cafes</p>
-               </div>
-               <div class="header-content__numbers-item">
-                  23
-                  <p>food trucks</p>
-               </div>
-            </div>
-         </div>
+          </ul>
+        </nav>
+        <button class="header-top__buy-btn" id="buy-btn__header">
+          Buy now
+          <svg width="7px" height="10px">
+            <use xlink:href="images/sprite.svg#angle-right"></use>
+          </svg>
+        </button>
       </div>
-   </header>
-   <main class="main">
+      <div class="header-content">
+        <div class="header-content__inner">
+          <h1 class="header-content__title">
+            ice cream
+            made with
+            passion
+          </h1>
+          <div class="header-content__links">
+            <a class="header-content__links-item header-content__links-products" href="#products">Products</a>
+            <a class="header-content__links-item header-content__links-how" href="#how">How it's made?</a>
+          </div>
+          <div class="header-content__info" href="#">
+            <img class="header-content__info-img" src="images/dish.png" alt="ice cream">
+            <a class="header-content__info-link" href="#">
+              <span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et
+              </span>
+              <svg width="40px" height="15px">
+                <use xlink:href="images/sprite.svg#default-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <picture class="header-content__img">
+          <source srcset="images/header-imgs/1200.png" media="(min-width: 769px)">
+          <source srcset="images/header-imgs/768.png" media="(max-width: 768px)">
+          <source srcset="images/header-imgs/320.png" media="(max-width: 400px)">
+          <img src="images/header-imgs/1200.png" alt="header-img">
+        </picture>
+        <div class="header-content__numbers">
+          <div class="header-content__numbers-item">
+            16
+            <p>cafes</p>
+          </div>
+          <div class="header-content__numbers-item">
+            23
+            <p>food trucks</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="arrow">
+      <span></span>
+    </div>
+  </main>
+  <footer class="footer">
 
-   </main>
-   <footer class="footer">
-
-   </footer>
+  </footer>
 
 
-   <script src="js/main.min.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
 
 </html>
