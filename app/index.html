@@ -14,9 +14,11 @@
     <div class="container">
       <div class="header-top">
         <a class="header-top__logo-link" href="#">
-          <svg class="header-top__logo-img" width="60px" height="65px">
-            <use xlink:href="images/sprite.svg#logo"></use>
-          </svg>
+          <picture class="header-top__logo-img">
+            <source srcset="images/icons/logo320.svg" media="(max-width: 500px)">
+            <source srcset="images/icons/logo768.svg" media="(max-width: 768px)">
+            <img src="images/icons/logo.svg" alt="logo">
+          </picture>
         </a>
         <nav class="menu">
           <button class="menu__btn" id="menu__btn">

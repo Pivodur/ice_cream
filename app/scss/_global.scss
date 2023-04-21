@@ -18,6 +18,12 @@ body * {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  @media (max-width: 768px) {
+    padding: 0 32px;
+  };
+  @media (max-width: 500px) {
+    padding: 0 20px;
+  };
 }
 
 @mixin adaptive-value(
@@ -51,7 +57,7 @@ body * {
   font-family: "Montserrat";
   font-weight: 600;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 1.2;
   color: $title;
   transition: all 0.3s;
   &:hover {
@@ -71,7 +77,8 @@ body * {
   border-radius: 10px;
   font-family: "Montserrat";
   font-weight: 600;
-  line-height: 17px;
+  font-size: 12px;
+  line-height: 1.2;
   padding: 12px 34px;
   border: none;
   transition: all 0.3s;
