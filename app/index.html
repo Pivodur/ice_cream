@@ -1,16 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-   <link rel="stylesheet" href="css/style.min.css">
-</head>
-<body>
-   start
 
-   
-   <script src="js/main.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICE CREAM</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-top">
+        <a class="header-top__logo-link" href="#">
+          <picture class="header-top__logo-img">
+            <source srcset="images/icons/logo320.svg" media="(max-width: 500px)">
+            <source srcset="images/icons/logo768.svg" media="(max-width: 768px)">
+            <img src="images/icons/logo.svg" alt="logo">
+          </picture>
+        </a>
+        <nav class="menu">
+          <button class="menu__btn" id="menu__btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="menu__list" id="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Home</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#how">How it's made?</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="">Our products</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="">Contact</a>
+            </li>
+            <button class="header-top__buy-btn" id="buy-btn__menu">
+              Buy now
+              <svg width="7px" height="10px">
+                <use xlink:href="images/sprite.svg#angle-right"></use>
+              </svg>
+            </button>
+          </ul>
+        </nav>
+        <button class="header-top__buy-btn" id="buy-btn__header">
+          Buy now
+          <svg width="7px" height="10px">
+            <use xlink:href="images/sprite.svg#angle-right"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="header-content">
+        <div class="header-content__inner">
+          <h1 class="header-content__title">
+            ice cream
+            made with
+            passion
+          </h1>
+          <div class="header-content__links">
+            <a class="header-content__links-item header-content__links-products" href="#products">Products</a>
+            <a class="header-content__links-item header-content__links-how" href="#how">How it's made?</a>
+          </div>
+          <div class="header-content__info" href="#">
+            <img class="header-content__info-img" src="images/dish.png" alt="ice cream">
+            <a class="header-content__info-link" href="#">
+              <span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et
+              </span>
+              <svg width="40px" height="15px">
+                <use xlink:href="images/sprite.svg#default-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <picture class="header-content__img">
+          <source srcset="images/header-imgs/1200.png" media="(min-width: 769px)">
+          <source srcset="images/header-imgs/768.png" media="(max-width: 768px)">
+          <source srcset="images/header-imgs/320.png" media="(max-width: 400px)">
+          <img src="images/header-imgs/1200.png" alt="header-img">
+        </picture>
+        <div class="header-content__numbers">
+          <div class="header-content__numbers-item">
+            16
+            <p>cafes</p>
+          </div>
+          <div class="header-content__numbers-item">
+            23
+            <p>food trucks</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="section__products">
+      <div class="container">
+        <div class="products">
+          <p class="products__suptitle">
+            100% natural
+          </p>
+          <h3 class="products__title">
+            products
+          </h3>
+          <div class="products__items">
+            <div class="products__item">
+              <div class="products__img-wrapper">
+                <img class="products__img" src="images/products/1.png" alt="ice cream product">
+              </div>
+              <div class="products__content">
+                <h5 class="products__name">
+                  ice cream
+                </h5>
+                <p class="products__text">
+                  Soft ice cream with a delicate taste. Made with milk, cream, sugar and natural stabilizer
+                </p>
+                <div class="products__arrow">
+                  <svg  width="40px" height="15px">
+                    <use xlink:href="images/sprite.svg#default-arrow"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="products__item">
+              <div class="products__img-wrapper">
+                <img class="products__img" src="images/products/2.png" alt="ice cream product">
+              </div>
+              <div class="products__content">
+                <h5 class="products__name">
+                  ice coffee
+                </h5>
+                <p class="products__text">
+                  Fragrant invigorating drink created from 100% natural ingredients without the use of preservatives and flavor enhancers
+                </p>
+                <div class="products__arrow">
+                  <svg  width="40px" height="15px">
+                    <use xlink:href="images/sprite.svg#default-arrow"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="products__item">
+              <div class="products__img-wrapper">
+                <img class="products__img" src="images/products/3.png" alt="ice cream product">
+              </div>
+              <div class="products__content">
+                <h5 class="products__name">
+                  milkshakes
+                </h5>
+                <p class="products__text">
+                  Sweet drinks based on milk and ice cream, supplemented with syrups, fruits, berries and other sweets of your choice
+                </p>
+                <div class="products__arrow">
+                  <svg  width="40px" height="15px">
+                    <use xlink:href="images/sprite.svg#default-arrow"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+
+  </footer>
+
+
+  <script src="js/main.min.js"></script>
 </body>
+
 </html>
