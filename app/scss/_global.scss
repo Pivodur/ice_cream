@@ -63,6 +63,9 @@ body * {
   line-height: 1.2;
   color: $title;
   transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
   &:hover {
     border-color: #0a8817;
   }
@@ -116,6 +119,7 @@ body * {
   color: $accent;
   padding: 12px 21px;
   transition: all .3s;
+  
   &:hover {
     color: #0a8817;
   }
