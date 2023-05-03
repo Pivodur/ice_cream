@@ -796,7 +796,7 @@
     @media (max-width: 500px) {
       margin-top: -345px;
       margin-bottom: 32px;
-    };
+    }
   }
 
   &__buttons {
@@ -807,11 +807,11 @@
     font-weight: 600;
     margin-bottom: 120px;
     @media (max-width: 1200px) {
-      @include adaptive-value('margin-bottom', 120, 40, 768)
-    };
+      @include adaptive-value("margin-bottom", 120, 40, 768);
+    }
     @media (max-width: 768px) {
       margin-bottom: 40px;
-    };
+    }
   }
 
   &__btn-location {
@@ -849,20 +849,20 @@
   font-weight: 500;
   color: $title;
   @media (max-width: 1200px) {
-    @include adaptive-value('padding-left', 40, 24, 768);
-    @include adaptive-value('padding-right', 40, 24, 768);
-  };
+    @include adaptive-value("padding-left", 40, 24, 768);
+    @include adaptive-value("padding-right", 40, 24, 768);
+  }
   @media (max-width: 768px) {
     padding: 40px 24px;
     font-size: 14px;
-  };
+  }
   @media (max-width: 720px) {
     max-width: 100%;
-  };
+  }
   @media (max-width: 500px) {
     padding: 40px 32px;
     font-size: 12px;
-  };
+  }
   &__place {
     display: inline-block;
     padding: 1px 14px;
@@ -875,7 +875,7 @@
       padding: 0 14px;
       line-height: 16px;
       border-radius: 4px;
-    };
+    }
   }
 
   &__location {
@@ -926,14 +926,14 @@
     padding-bottom: 54px;
     @media (max-width: 720px) {
       flex-wrap: wrap;
-    };
+    }
   }
 
   &__name {
     text-transform: uppercase;
     @media (max-width: 720px) {
       margin-bottom: 42px;
-    };
+    }
   }
 
   &__suptitle {
@@ -943,7 +943,7 @@
     @media (max-width: 768px) {
       font-size: 26px;
       max-width: 360px;
-    };
+    }
   }
 
   &__title {
@@ -953,14 +953,14 @@
     @media (max-width: 768px) {
       font-size: 48px;
       max-width: 340px;
-    };
+    }
   }
 
   &__contacts {
     flex-shrink: 0;
     @media (max-width: 720px) {
       margin-left: auto;
-    };
+    }
   }
 
   &__list {
@@ -976,10 +976,10 @@
     letter-spacing: 0.02em;
     @media (max-width: 768px) {
       font-size: 14px;
-    };
+    }
     @media (max-width: 500px) {
       font-size: 12px;
-    };
+    }
     span {
       color: $title;
     }
@@ -997,9 +997,199 @@
     font-size: 12px;
     letter-spacing: 0.02em;
     color: #7a7a7a;
-    border-top: 1px solid #E1E1E1;
+    border-top: 1px solid #e1e1e1;
     @media (max-width: 500px) {
       height: 120px;
-    };
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  z-index: 50;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  max-width: 570px;
+  width: 100%;
+  background: #fcfcfc;
+  border: 2px solid $accent;
+  border-radius: 10px;
+  padding: 32px 40px;
+  transition: scale .3s ease-in-out;
+  &.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &__close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    top: 20px;
+    right: 20px;
+  }
+  &__title {
+    font-family: "Seymour One";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: center;
+    color: $title;
+    margin-bottom: 40px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    column-gap: 32px;
+    margin-bottom: 40px;
+  }
+
+  &__form-radio {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+  }
+
+  &__form-radio:checked + .modal__item--icecream {
+    .modal__item-inner {
+      background-color: #96af8c;
+    }
+  }
+
+  &__form-radio:checked + .modal__item--icecoffee {
+    .modal__item-inner {
+      background-color: #efd478;
+    }
+  }
+
+  &__form-radio:checked + .modal__item--milkshake {
+    .modal__item-inner {
+      background-color: #d6936d;
+    }
+  }
+
+  &__item {
+    width: 132px;
+    &--icecream {
+      .modal__item-imgwrapper::after {
+        background: #9cbe8f;
+        box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+      }
+      .modal__item-inner {
+        border: 2px solid #96af8c;
+      }
+    }
+    &--icecoffee {
+      .modal__item-imgwrapper::after {
+        background: #efd478;
+        box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+      }
+      .modal__item-inner {
+        border: 2px solid #efd478;
+      }
+    }
+    &--milkshake {
+      .modal__item-imgwrapper::after {
+        background: #d6936d;
+        box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+      }
+      .modal__item-inner {
+        border: 2px solid #d6936d;
+      }
+    }
+  }
+
+  &__item-imgwrapper {
+    position: relative;
+    margin-bottom: -50%;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 132px;
+      height: 132px;
+      bottom: -7px;
+      border-radius: 50%;
+    }
+  }
+
+  &__item-img {
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__item-inner {
+    height: 135px;
+    border-radius: 16px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transition: all 0.3s;
+  }
+
+  &__item-name {
+    font-family: "Montserrat";
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $title;
+  }
+
+  &__form {
+  }
+
+  &__input {
+    display: block;
+    max-width: 370px;
+    width: 100%;
+    height: 42px;
+    background: rgba(248, 210, 78, 0.1);
+    border: 1px solid #84a178;
+    border-radius: 10px;
+    padding: 0px 16px;
+    margin: 0 auto 16px;
+    &::placeholder {
+      font-family: "Montserrat";
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: $title;
+    }
+  }
+
+  &__textarea {
+    display: block;
+    max-width: 370px;
+    width: 100%;
+    resize: none;
+    height: 84px;
+    background: rgba(248, 210, 78, 0.1);
+    border: 1px solid #84a178;
+    border-radius: 10px;
+    padding: 11px 16px;
+    margin: 0 auto 32px;
+    &::placeholder {
+      font-family: "Montserrat";
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: $title;
+    }
+  }
+  &__form-btn {
+    @extend %button;
+    display: block;
+    margin: 0 auto;
   }
 }

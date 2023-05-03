@@ -34,12 +34,12 @@
               <a class="menu__link" href="#how">How it's made?</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="">Our products</a>
+              <a class="menu__link" href="#products">Our products</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="">Contact</a>
+              <a class="menu__link" href="#footer">Contact</a>
             </li>
-            <button class="header-top__buy-btn" id="buy-btn__menu">
+            <button class="header-top__buy-btn" id="buy-btn__menu" data-modal-target="#buy-modal">
               Buy now
               <svg width="7px" height="10px">
                 <use xlink:href="images/sprite.svg#angle-right"></use>
@@ -47,13 +47,15 @@
             </button>
           </ul>
         </nav>
-        <button class="header-top__buy-btn" id="buy-btn__header">
+        <button class="header-top__buy-btn" id="buy-btn__header" data-modal-target="#buy-modal">
           Buy now
           <svg width="7px" height="10px">
             <use xlink:href="images/sprite.svg#angle-right"></use>
           </svg>
         </button>
       </div>
+      <div class="overlay" id="#overlay"></div>
+
       <div class="header-content">
         <div class="header-content__inner">
           <h1 class="header-content__title">
@@ -98,7 +100,7 @@
     </div>
   </header>
   <main class="main">
-    <section class="section__products">
+    <section class="section__products" id="products">
       <div class="container">
         <div class="products">
           <p class="products__suptitle">
@@ -168,7 +170,7 @@
         </div>
       </div>
     </section>
-    <section class="section__how">
+    <section class="section__how" id="how">
       <div class="container">
         <div class="how">
           <p class="how__suptitle">
@@ -298,8 +300,63 @@
         </div>
       </div>
     </section>
+    <div class="modal" id="buy-modal">
+      <button class="modal__close" data-close-button>
+        <img src="images/icons/cross-black.svg" alt="close btn">
+      </button>
+      <p class="modal__title">
+        Buy now
+      </p>
+      <form class="modal__form" action="#">
+        <div class="modal__items">
+          <label class="modal__form-label">
+            <input class="modal__form-radio" type="radio" name="buy">
+            <div class="modal__item modal__item--icecream">
+              <div class="modal__item-imgwrapper">
+                <img class="modal__item-img" src="images/modal/buy-1.png" alt="ice cream choose">
+              </div>
+              <div class="modal__item-inner">
+                <p class="modal__item-name">
+                  ice cream
+                </p>
+              </div>
+            </div>
+          </label>
+          <label class="modal__form-label">
+            <input class="modal__form-radio" type="radio" name="buy">
+            <div class="modal__item modal__item--icecoffee">
+              <div class="modal__item-imgwrapper">
+                <img class="modal__item-img" src="images/modal/buy-2.png" alt="ice coffee choose">
+              </div>
+              <div class="modal__item-inner">
+                <p class="modal__item-name">
+                  ice coffee
+                </p>
+              </div>
+            </div>
+          </label>
+          <label class="modal__form-label">
+            <input class="modal__form-radio" type="radio" name="buy">
+            <div class="modal__item modal__item--milkshake">
+              <div class="modal__item-imgwrapper">
+                <img class="modal__item-img" src="images/modal/buy-3.png" alt="milkshake choose">
+              </div>
+              <div class="modal__item-inner">
+                <p class="modal__item-name">
+                  milkshake
+                </p>
+              </div>
+            </div>
+          </label>
+        </div>
+        <input class="modal__input" type="text" placeholder="Name">
+        <input class="modal__input" type="text" placeholder="Phone">
+        <textarea class="modal__textarea" placeholder="Comment"></textarea>
+        <button class="modal__form-btn" type="submit">Submit</button>
+      </form>
+    </div>
   </main>
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <div class="footer-top">
       <div class="container">
         <div class="footer-top__items">
@@ -473,7 +530,7 @@
               </li>
             </ul>
             <div class="footer-bottom__phone">
-              <span >Feel free to contact</span>
+              <span>Feel free to contact</span>
               <a href="tel:+61 (0) 383 766 284">+61 (0) 383 766 284</a>
             </div>
           </div>
@@ -484,6 +541,8 @@
       </div>
     </div>
   </footer>
+
+
 
 
   <script type="module" src="js/main.min.js"></script>
