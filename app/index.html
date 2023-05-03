@@ -110,7 +110,7 @@
             products
           </h3>
           <div class="products__items">
-            <div class="products__item">
+            <div class="products__item" data-modal-target="#products-modal">
               <div class="products__img-wrapper">
                 <img class="products__img" src="images/products/1.png" alt="ice cream product">
               </div>
@@ -128,7 +128,7 @@
                 </div>
               </div>
             </div>
-            <div class="products__item">
+            <div class="products__item" data-modal-target="#products-modal">
               <div class="products__img-wrapper">
                 <img class="products__img" src="images/products/2.png" alt="ice cream product">
               </div>
@@ -147,7 +147,7 @@
                 </div>
               </div>
             </div>
-            <div class="products__item">
+            <div class="products__item" data-modal-target="#products-modal">
               <div class="products__img-wrapper">
                 <img class="products__img" src="images/products/3.png" alt="ice cream product">
               </div>
@@ -349,6 +349,88 @@
             </div>
           </label>
         </div>
+        <input class="modal__input" type="text" placeholder="Name">
+        <input class="modal__input" type="text" placeholder="Phone">
+        <textarea class="modal__textarea" placeholder="Comment"></textarea>
+        <button class="modal__form-btn" type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="modal" id="products-modal">
+      <button class="modal__close" data-close-button>
+        <img src="images/icons/cross-black.svg" alt="close btn">
+      </button>
+      <p class="modal__title">
+        Chololate icecream
+      </p>
+      <div class="modal__imgwrapper">
+        <img class="modal__img" src="images/modal/chocolate.png" alt="ice cream">
+      </div>
+      <div class="modal__info">
+        <div class="modal__info-item">
+          <span class="modal__info-number">
+            320
+          </span>
+          <span class="modal__info-name">
+            kcal
+          </span>
+        </div>
+        <div class="modal__info-item">
+          <span class="modal__info-number">
+            4g 
+          </span>
+          <span class="modal__info-name">
+            Protein
+          </span>
+        </div>
+        <div class="modal__info-item">
+          <span class="modal__info-number">
+            8,2g 
+          </span>
+          <span class="modal__info-name">
+            Fats
+          </span>
+        </div>
+        <div class="modal__info-item">
+          <span class="modal__info-number">
+            40,4g 
+          </span>
+          <span class="modal__info-name">
+            Carbs
+          </span>
+        </div>
+      </div>
+      <div class="modal__ingrid">
+        <div class="modal__ingrid-title">
+          Ingredients
+        </div>
+        <ul class="modal__ingrid-list">
+          <li class="modal__ingrid-item">
+            <span>Milk</span>
+            <span>100ml</span>
+          </li>
+          <li class="modal__ingrid-item">
+            <span>Belgian chocolate</span>
+            <span>20g</span>
+          </li>
+          <li class="modal__ingrid-item">
+            <span>Cream</span>
+            <span>150 ml</span>
+          </li>
+          <li class="modal__ingrid-item">
+            <span>Cocoa powder</span>
+            <span>30g</span>
+          </li>
+          <li class="modal__ingrid-item">
+            <span>Sugar</span>
+            <span>40g</span>
+          </li>
+          <li class="modal__ingrid-item">
+            <span>Vanilla sugar</span>
+            <span>10g</span>
+          </li>
+        </ul>
+      </div>
+      <form class="modal__form">
         <input class="modal__input" type="text" placeholder="Name">
         <input class="modal__input" type="text" placeholder="Phone">
         <textarea class="modal__textarea" placeholder="Comment"></textarea>

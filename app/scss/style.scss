@@ -1016,7 +1016,9 @@
   border: 2px solid $accent;
   border-radius: 10px;
   padding: 32px 40px;
-  transition: scale .3s ease-in-out;
+  transition: scale 0.3s ease-in-out;
+  overflow: auto;
+  max-height: 90%;
   &.active {
     transform: translate(-50%, -50%) scale(1);
   }
@@ -1041,7 +1043,7 @@
     line-height: 1.4;
     text-align: center;
     color: $title;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   }
 
   &__items {
@@ -1127,6 +1129,31 @@
     z-index: 1;
   }
 
+  &__imgwrapper {
+    position: relative;
+    margin: 0 auto 28px;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 132px;
+      height: 132px;
+      bottom: -7px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      background: #9cbe8f;
+      box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+    }
+  }
+
+  &__img {
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+  }
+
   &__item-inner {
     height: 135px;
     border-radius: 16px;
@@ -1138,7 +1165,6 @@
   }
 
   &__item-name {
-    font-family: "Montserrat";
     font-weight: 700;
     text-align: center;
     letter-spacing: 0.04em;
@@ -1160,7 +1186,6 @@
     padding: 0px 16px;
     margin: 0 auto 16px;
     &::placeholder {
-      font-family: "Montserrat";
       font-weight: 400;
       font-size: 14px;
       line-height: 140%;
@@ -1180,7 +1205,6 @@
     padding: 11px 16px;
     margin: 0 auto 32px;
     &::placeholder {
-      font-family: "Montserrat";
       font-weight: 400;
       font-size: 14px;
       line-height: 140%;
@@ -1192,4 +1216,71 @@
     display: block;
     margin: 0 auto;
   }
+
+  &__info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 48px;
+  }
+
+  &__info-item {
+    width: 65px;
+    height: 90px;
+    border: 2px solid #9cbe8f;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $title;
+  }
+
+  &__info-number {
+    display: block;
+    width: 53px;
+    height: 53px;
+    background: #9cbe8f;
+    box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
+    border-radius: 50%;
+    font-weight: 500;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 7px;
+  }
+
+  &__info-name {
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  &__ingrid {
+    margin-bottom: 48px;
+    color: $title;
+  }
+
+  &__ingrid-title {
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  &__ingrid-list {
+  }
+
+  &__ingrid-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 11px;
+    }
+  }
 }
+
+// #products-modal {
+//   transform: translate(-50%, -50%) scale(1);
+// }
