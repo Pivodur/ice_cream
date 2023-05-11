@@ -3,6 +3,7 @@
 @import "reset";
 @import "global";
 @import "../../node_modules/swiper/swiper-bundle.min";
+@import "../../node_modules/video.js/dist/video-js.min";
 
 .header {
   background-color: $bg;
@@ -827,14 +828,15 @@
   }
 
   &__btn-franchise {
-    @extend %button-transparent;
     justify-content: center;
     width: 196px;
     padding: 11px 46px;
     font-size: 14px;
+    background: transparent;
     svg {
       stroke: $title;
     }
+    @extend %button-transparent;
   }
 }
 
@@ -1043,7 +1045,8 @@
     line-height: 1.4;
     text-align: center;
     color: $title;
-    margin-bottom: 32px;
+    max-width: 323px;
+    margin: 0 auto 32px;
   }
 
   &__items {
@@ -1173,6 +1176,7 @@
   }
 
   &__form {
+    margin-top: 48px;
   }
 
   &__input {
@@ -1279,8 +1283,61 @@
       margin-bottom: 11px;
     }
   }
-}
 
-// #products-modal {
-//   transform: translate(-50%, -50%) scale(1);
-// }
+  &__video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto 32px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+
+    .vjs-big-play-button {
+      border: none;
+      background: transparent;
+      .vjs-icon-placeholder {
+        &::before {
+          content: "" !important;
+
+          background-image: url("../images/icons/play.svg");
+          background-position: center center;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+    .video-js .vjs-big-play-button:focus,
+    .video-js:hover .vjs-big-play-button {
+      border-color: transparent;
+      background-color: transparent;
+    }
+  }
+
+  #video-1 {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__text {
+    color: $title;
+    font-size: 16px;
+  }
+
+  &__map-wrapper {
+    max-width: 448px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 32px;
+  }
+
+  &__link-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__map-link {
+    display: inline-block;
+    color: $title;
+    @extend %button;
+  }
+}

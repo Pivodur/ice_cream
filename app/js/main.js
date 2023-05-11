@@ -1,3 +1,4 @@
+
 const mySwiper = new Swiper('.slider', {
   slidesPerView: 1,
   spaceBetween: 30,
@@ -7,7 +8,6 @@ const mySwiper = new Swiper('.slider', {
     clickable: true,
   }
 });
-
 
 
 
@@ -57,3 +57,5 @@ function closeModal(modal) {
   modal.classList.remove("active");
   overlay.classList.remove("active");
 }
+
+videojs(document.querySelector(".video-js"));

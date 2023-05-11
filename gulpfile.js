@@ -36,7 +36,11 @@ function styles() {
 }
 // "node_modules/swiper/swiper-bundle.js",
 function scripts() {
-  return src(["node_modules/swiper/swiper-bundle.min.js", "app/js/main.js"])
+  return src([
+    "node_modules/swiper/swiper-bundle.min.js",
+    "node_modules/video.js/dist/video.min.js",
+    "app/js/main.js",
+  ])
     .pipe(sourcemaps.init())
     .pipe(concat("main.min.js"))
     .pipe(uglify())

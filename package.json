@@ -18,7 +18,9 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "sass": "^1.57.1"
+    "sass": "^1.57.1",
+    "video.js": "^8.3.0",
+    "videojs-youtube": "^3.0.1"
   },
   "dependencies": {
     "@types/swiper": "^6.0.0",

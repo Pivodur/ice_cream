@@ -200,7 +200,7 @@
                   This is enough to choose ice cream and coffee for any mood!
                 </p>
               </div>
-              <button class="how__btn">
+              <button class="how__btn" data-modal-target="#video-modal">
                 Read more
                 <svg width="7px" height="10px">
                   <use xlink:href="images/sprite.svg#angle-right"></use>
@@ -376,7 +376,7 @@
         </div>
         <div class="modal__info-item">
           <span class="modal__info-number">
-            4g 
+            4g
           </span>
           <span class="modal__info-name">
             Protein
@@ -384,7 +384,7 @@
         </div>
         <div class="modal__info-item">
           <span class="modal__info-number">
-            8,2g 
+            8,2g
           </span>
           <span class="modal__info-name">
             Fats
@@ -392,7 +392,7 @@
         </div>
         <div class="modal__info-item">
           <span class="modal__info-number">
-            40,4g 
+            40,4g
           </span>
           <span class="modal__info-name">
             Carbs
@@ -433,6 +433,61 @@
       <form class="modal__form">
         <input class="modal__input" type="text" placeholder="Name">
         <input class="modal__input" type="text" placeholder="Phone">
+        <textarea class="modal__textarea" placeholder="Comment"></textarea>
+        <button class="modal__form-btn" type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="modal" id="video-modal">
+      <button class="modal__close" data-close-button>
+        <img src="images/icons/cross-black.svg" alt="close btn">
+      </button>
+      <p class="modal__title">
+        How it's made?
+      </p>
+      <div class="modal__video">
+        <video class="video-js" id="video-1" controls>
+          <source src="images/modal/video.mp4" type="video/mp4">
+        </video>
+      </div>
+      <p class="modal__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem
+        ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+      </p>
+    </div>
+
+    <div class="modal" id="location-modal">
+      <button class="modal__close" data-close-button>
+        <img src="images/icons/cross-black.svg" alt="close btn">
+      </button>
+      <p class="modal__title">
+        Our Locations
+      </p>
+      <div class="modal__map-wrapper">
+        <img src="images/modal/map.jpg" alt="map">
+      </div>
+      <div class="modal__link-wrapper">
+        <a class="modal__map-link" href="https://goo.gl/maps/Q9Nt4RGobpbqnKeW7">
+          Open map
+        </a>
+      </div>
+    </div>
+
+    <div class="modal" id="franchise-modal">
+      <button class="modal__close" data-close-button>
+        <img src="images/icons/cross-black.svg" alt="close btn">
+      </button>
+      <p class="modal__title">
+        Thank you for your interest in owning an Ice Cream shop
+      </p>
+      <p class="modal__text">
+        Due to the overwhelming volume of franchise requests we are not accepting new franchisee applications at this
+        time. Once the application process resumes, we will contact you for further information. Please fill out the
+        contact information below and we will reach out for additional information. We appreciate your patience.
+      </p>
+      <form class="modal__form">
+        <input class="modal__input" type="text" placeholder="Name">
+        <input class="modal__input" type="text" placeholder="Phone">
+        <input class="modal__input" type="text" placeholder="Email">
         <textarea class="modal__textarea" placeholder="Comment"></textarea>
         <button class="modal__form-btn" type="submit">Submit</button>
       </form>
@@ -561,18 +616,18 @@
           </div>
         </div>
         <div class="footer-top__buttons">
-          <div class="footer-top__btn-location">
+          <button class="footer-top__btn-location" data-modal-target="#location-modal">
             <span>Our Locations</span>
             <svg width="7px" height="10px">
               <use href="images/sprite.svg#angle-right"></use>
             </svg>
-          </div>
-          <div class="footer-top__btn-franchise">
+          </button>
+          <button class="footer-top__btn-franchise" data-modal-target="#franchise-modal">
             <span>Franchise</span>
             <svg width="7px" height="10px">
               <use href="images/sprite.svg#angle-right"></use>
             </svg>
-          </div>
+          </button>
         </div>
       </div>
     </div>

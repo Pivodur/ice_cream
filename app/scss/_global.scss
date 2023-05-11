@@ -86,10 +86,15 @@ body * {
   column-gap: 5px;
   &:hover {
     border-color: #0a8817;
+
   }
   &:focus {
     border-color: #0a8817;
     color: $default;
+    svg {
+      stroke: #fff;
+      transition: stroke .3s;
+    }
   }
   &.disabled {
     background-color: #ababab;
